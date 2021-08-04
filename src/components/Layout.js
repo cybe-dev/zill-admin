@@ -1,8 +1,12 @@
 import * as Sidebar from "./Sidebar";
-import { FiHome, FiMenu, FiX } from "react-icons/fi";
+import { FiCreditCard, FiHome, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 
-export default function Layout({ children }) {
+export default function Layout({
+  active = "Dashboard",
+  pageTitle = "Dashboard",
+  children,
+}) {
   const [menuShown, setMenuShown] = useState(false);
   return (
     <div className="h-screen flex bg-background">
@@ -35,14 +39,15 @@ export default function Layout({ children }) {
           </button>
         </div>
         <Sidebar.Wrapper>
-          <Sidebar.List to="/" icon={FiHome} active={true}>
+          <Sidebar.List to="/" icon={FiHome} active={active === "Dashboard"}>
             Dashboard
           </Sidebar.List>
-          <Sidebar.List to="/" icon={FiHome}>
-            Content
-          </Sidebar.List>
-          <Sidebar.List to="/" icon={FiHome}>
-            Buku
+          <Sidebar.List
+            to="/modal"
+            icon={FiCreditCard}
+            active={active === "Modal"}
+          >
+            Modal
           </Sidebar.List>
         </Sidebar.Wrapper>
       </div>
@@ -57,7 +62,7 @@ export default function Layout({ children }) {
           >
             <FiMenu />
           </button>
-          <h1 className="font-bold text-lg">Dashboard</h1>
+          <h1 className="font-bold text-lg">{pageTitle}</h1>
         </div>
         {children}
       </div>
