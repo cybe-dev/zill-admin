@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-black-200;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.monda {
+  font-family: "Monda", sans-serif;
+}
+
+.nunito-sans {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
