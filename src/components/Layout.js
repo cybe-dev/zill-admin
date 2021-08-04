@@ -9,7 +9,7 @@ export default function Layout({
 }) {
   const [menuShown, setMenuShown] = useState(false);
   return (
-    <div className="h-screen flex bg-background">
+    <div className="h-screen overflow-auto flex bg-background">
       {menuShown && (
         <div
           className="bg-black-100 opacity-50 position fixed top-0 left-0 w-full h-screen block lg:hidden"
@@ -27,7 +27,9 @@ export default function Layout({
         }
       >
         <div className="mb-5 h-16 border-b border-white-200 flex items-center">
-          <h1 className="text-xl oswald p-5 font-bold flex-1">Admin Panel</h1>
+          <h1 className="text-xl montserrat-alternates p-5 font-bold flex-1">
+            Admin Panel
+          </h1>
           <button
             className="w-8 h-8 mr-3 flex lg:hidden justify-center items-center text-black-400"
             type="button"
@@ -51,8 +53,8 @@ export default function Layout({
           </Sidebar.List>
         </Sidebar.Wrapper>
       </div>
-      <div className="h-screen overflow-auto flex-1">
-        <div className="h-16 bg-white-100 border-b border-white-200 flex items-center p-5">
+      <div className="flex-1 overflow-auto h-screen">
+        <div className="h-16 bg-white-100 border-b border-white-200 flex items-center p-5 sticky">
           <button
             className="w-8 h-8 mr-3 flex lg:hidden justify-center items-center"
             type="button"

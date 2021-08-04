@@ -7,14 +7,7 @@ export const Wrapper = ({ children }) => {
 export const List = ({ children, active, icon, ...props }) => {
   const Icon = icon;
   return (
-    <li
-      className={
-        "pl-5 mb-2 " +
-        (active
-          ? "border-l-4 border-primary-500"
-          : "border-l-4 border-white-100")
-      }
-    >
+    <li className="pl-5 mb-2">
       <Link
         className={
           "rounded-l-md pr-5 py-3 monda pl-3 flex items-center " +

@@ -11,7 +11,9 @@ export default function Button({ className, color, children, ...props }) {
   }
   return (
     <button
-      className={"px-3 py-2 rounded-sm " + colorClassName + " " + className}
+      className={
+        "px-3 py-2 h-12 rounded-sm " + colorClassName + " " + className
+      }
       {...props}
     >
       {children}
