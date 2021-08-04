@@ -28,7 +28,7 @@ export default function Layout({
       >
         <div className="mb-5 h-16 border-b border-white-200 flex items-center">
           <h1 className="text-xl montserrat-alternates p-5 font-bold flex-1">
-            Admin Panel
+            Zill Admin
           </h1>
           <button
             className="w-8 h-8 mr-3 flex lg:hidden justify-center items-center text-black-400"

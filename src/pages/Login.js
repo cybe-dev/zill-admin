@@ -5,7 +5,7 @@ import TextInput from "../components/TextInput";
 
 export default function Login() {
   return (
-    <div className="bg-background min-h-screen flex justify-center lg:items-center">
+    <div className="bg-background min-h-screen flex justify-center items-center">
       <div className="w-full lg:w-3/4 xl:w-3/5 flex rounded bg-white-100 h-96 m-8">
         <div className="hidden lg:block lg:w-1/2 xl:w-7/12"></div>
         <div className="flex-1 p-8 border-l border-white-200">

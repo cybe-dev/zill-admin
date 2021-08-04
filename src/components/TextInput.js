@@ -9,7 +9,9 @@ const TextInput = forwardRef(
           {left && <div className="ml-3 mr-1 text-black-400">{left}</div>}
           <input
             ref={ref}
-            className={"h-full flex-1 p-2 rounded-sm " + className}
+            className={
+              "h-full flex-1 p-2 rounded-sm focus:outline-none " + className
+            }
             {...props}
           />
         </div>
